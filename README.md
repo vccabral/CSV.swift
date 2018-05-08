@@ -128,6 +128,7 @@ import CSV
 
 let stream = OutputStream(toFileAtPath: "/path/to/file.csv", append: false)!
 let csv = try! CSVWriter(stream: stream)
+csv.stream.open()
 
 try! csv.write(row: ["id", "name"])
 try! csv.write(row: ["1", "foo"])
